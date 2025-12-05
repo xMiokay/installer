@@ -7,7 +7,7 @@ services:
             - 21116:21116/udp
             - 21118:21118
         image: rustdesk/rustdesk-server:latest
-        command: hbbs -r <YOUR SERVER HERE>:21117
+        command: hbbs -r 192.168.1.211:21117
         volumes:
             - ./data:/root
         depends_on:
@@ -29,9 +29,9 @@ services:
         container_name: rustdesk_api
         build: ./build/
         environment:
-            URL: <YOUR SERVER HERE>
-            SUPERUSER_USERNAME: <DEFAULT ADMIN USERNAME>
-            SUPERUSER_PASSWORD: <DEFAULT ADMIN PASSWORD>
+            URL: 192.168.1.211
+            SUPERUSER_USERNAME: admin
+            SUPERUSER_PASSWORD: admin
         volumes:
             - ./db:/opt/rustdesk-api-server/db
             - ./data:/data
@@ -40,4 +40,4 @@ services:
             - hbbs
         restart: unless-stopped
         ports:
-            - 8000:8000
+            - 8000:8784
