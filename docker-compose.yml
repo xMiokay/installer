@@ -40,4 +40,4 @@ services:
             - hbbs
         restart: unless-stopped
         ports:
-            - 8000:8784
+            - 8784:8000
