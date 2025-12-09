@@ -29,7 +29,7 @@ services:
         container_name: rustdesk_api
         build: ./build/
         environment:
-            URL: 192.168.1.211
+            URL: https://192.168.1.211:8784
             SUPERUSER_USERNAME: admin
             SUPERUSER_PASSWORD: admin
         volumes:
