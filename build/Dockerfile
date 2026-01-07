@@ -13,6 +13,6 @@ COPY api_config.py /opt/rustdesk-api-server/api/api_config.py
 
 COPY run.docker.sh /scripts/run.sh
 RUN chmod +x /scripts/run.sh
-EXPOSE 8000
+EXPOSE 9400
 
 ENTRYPOINT [ "/scripts/run.sh" ]
