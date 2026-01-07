@@ -2,7 +2,7 @@ FROM python:latest
 
 RUN apt update
 RUN apt install -y curl wget unzip tar git qrencode python3-venv dnsutils
-RUN git clone https://github.com/infiniteremote/rustdesk-api-server.git /opt/rustdesk-api-server
+RUN git clone https://github.com/xMiokay/rustdesk-api-server /opt/rustdesk-api-server
 RUN mkdir -p /var/log/rustdesk-server-api/
 
 COPY install.docker.sh /scripts/install.sh
